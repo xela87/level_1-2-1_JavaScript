@@ -1,0 +1,30 @@
+body {
+    padding-top: 40px;
+}
+#rectangle {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+.controls {
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    background-color: darkgrey;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
