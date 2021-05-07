@@ -1,15 +1,11 @@
 let btn1 = document.getElementById('show')
 let btn2 = document.getElementById('delete')
 let btn3 = document.getElementById('hide')
+let btn4 = document.getElementById('hide-all')
 let counter = 0;
 
 btn1.onclick = () => {
-    if (counter % 2 !== 0 || counter === 0) {
         document.getElementById('rectangle').style.display = 'none';
-    } else {
-        document.getElementById('rectangle').style.display = 'block';
-    }
-    counter++;
 }
 
 btn2.onclick = () => {
@@ -17,10 +13,23 @@ btn2.onclick = () => {
 }
 
 btn3.onclick = () => {
-    counter++;
-    if (counter % 2 !== 0 || counter === 0) {
+    ++counter;
+    if (counter % 2 !== 0) {
         document.getElementById('rectangle').classList.add('hidden');
     } else {
         document.getElementsByClassName('hidden')[0].classList.remove('hidden')
+    }
+}
+
+btn4.onclick = () => {
+    ++counter;
+    if (counter % 2 !== 0) {
+        for (let i = 0; i < 5; i++) {
+            document.getElementsByClassName('rect-item')[i].classList.add('hidden')
+        }
+    } else {
+        for (let i = 0; i < 5; i++) {
+            document.getElementsByClassName('hidden')[0].classList.remove('hidden')
+        }
     }
 }
