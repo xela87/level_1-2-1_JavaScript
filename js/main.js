@@ -6,6 +6,7 @@ const btn5 = document.getElementById('hide-selectors');
 let counter = 0;
 const item = document.getElementById('rectangle');
 const yellow = document.getElementById('yellow-rectangle');
+const hoverBtn = document.getElementById('hover-button')
 
 btn1.onclick = () => {
     item.style.display = item.style.display === 'none' ? 'block' : 'none';
@@ -44,6 +45,7 @@ btn5.onclick = () => {
         selectors[i].style.opacity = selectors[i].style.opacity === "0" ? "1" : "0";
     }
 }
+
 yellow.onclick = () => {
     if (counter % 2 === 0) {
         ++counter;
@@ -53,4 +55,23 @@ yellow.onclick = () => {
         ++counter;
         yellow.style.opacity = "0";
     }
+}
+
+let redRect = document.getElementById('red-rectangle');
+hoverBtn.onmouseover = () => {
+    redRect.style.opacity = '1';
+}
+hoverBtn.onmouseout = () => {
+    redRect.style.opacity = '0';
+}
+
+let inputText = document.getElementById('some-text');
+let greenRect = document.getElementById('green-rectangle');
+
+inputText.onfocus = () => {
+    greenRect.style.opacity = '1';
+}
+
+inputText.oninput = () => {
+    greenRect.style.opacity = '0';
 }
