@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress ALL -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,8 +33,7 @@
 <h2>Experiment 3</h2>
 <div class="hazard-table">
     <div class="items-container">
-        <label for="text">Input any selector</label>
-        <input type="text" id="text">
+        <input type="text" id="text" placeholder="Input any selector">
     </div>
 </div>
 <div class="controls">
@@ -60,16 +60,27 @@
         <div id="green-rectangle"></div>
     </div>
     <div class="items-container">
-        <label for="some-text">Enter any text</label>
-        <input type="text" id="some-text">
+        <input type="text" id="some-text" placeholder="Enter any text">
     </div>
 </div>
 <h2>Experiment 7</h2>
 <div class="hazard-table">
-    <div class="items-container-col">
-        <label for="image-link">Enter image link</label>
-        <input type="text" id="image-link">
-        <img src="#" alt="">
+    <div class="container">
+        <div class="column">
+            <input type="text" id="image-link" placeholder="Enter image link">
+            <button id="submit-link">Show</button>
+        </div>
+        <img id="image" src="images/image.png" alt="" >
+    </div>
+</div>
+<h2>Experiment 8</h2>
+<div class="hazard-table">
+    <div class="container">
+        <div class="column">
+            <textarea placeholder="Enter image links"></textarea>
+            <button>Show</button>
+        </div>
+        <img src="images/image.png" alt="" >
     </div>
 </div>
 <script src="js/main.js"></script>

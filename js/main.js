@@ -75,3 +75,11 @@ inputText.onfocus = () => {
 inputText.oninput = () => {
     greenRect.style.opacity = '0';
 }
+
+const btn6 = document.getElementById('submit-link');
+let image = document.getElementById('image');
+
+btn6.onclick = () => {
+    image.src = document.getElementById('image-link').value;
+}
+
