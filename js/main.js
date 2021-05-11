@@ -26,13 +26,13 @@ btn3.onclick = () => {
 }
 
 btn4.onclick = () => {
-    ++counter;
+    counter++;
     if (counter % 2 !== 0) {
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 6; i++) {
             document.getElementsByClassName('rect-item')[i].classList.add('hidden');
         }
     } else {
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 6; i++) {
             document.getElementsByClassName('hidden')[0].classList.remove('hidden');
         }
     }
