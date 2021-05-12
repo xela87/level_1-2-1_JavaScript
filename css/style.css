@@ -85,6 +85,10 @@ textarea {
     height: 100%;
 }
 
+#images img {
+    width: 300px;
+}
+
 .controls {
     padding-top: 50px;
     margin: 0 auto;

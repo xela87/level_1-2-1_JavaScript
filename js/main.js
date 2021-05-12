@@ -6,7 +6,9 @@ const btn5 = document.getElementById('hide-selectors');
 let counter = 0;
 const item = document.getElementById('rectangle');
 const yellow = document.getElementById('yellow-rectangle');
-const hoverBtn = document.getElementById('hover-button')
+const hoverBtn = document.getElementById('hover-button');
+const btn6 = document.getElementById('submit-link');
+const btn7 = document.getElementById('submit-links');
 
 btn1.onclick = () => {
     item.style.display = item.style.display === 'none' ? 'block' : 'none';
@@ -28,11 +30,11 @@ btn3.onclick = () => {
 btn4.onclick = () => {
     counter++;
     if (counter % 2 !== 0) {
-        for (let i = 0; i < 6; i++) {
+        for (let i = 1; i < 6; i++) {
             document.getElementsByClassName('rect-item')[i].classList.add('hidden');
         }
     } else {
-        for (let i = 0; i < 6; i++) {
+        for (let i = 1; i < 6; i++) {
             document.getElementsByClassName('hidden')[0].classList.remove('hidden');
         }
     }
@@ -76,10 +78,18 @@ inputText.oninput = () => {
     greenRect.style.opacity = '0';
 }
 
-const btn6 = document.getElementById('submit-link');
 let image = document.getElementById('image');
 
 btn6.onclick = () => {
     image.src = document.getElementById('image-link').value;
+}
+
+btn7.onclick = () => {
+    const images = document.getElementById('links-area').value.split('\n');
+    for (let link of images) {
+        let image = document.createElement('img');
+        image.src = link;
+        document.getElementById('images').appendChild(image);
+    }
 }
 
