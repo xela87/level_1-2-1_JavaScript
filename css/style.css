@@ -3,7 +3,7 @@ body {
     background: gainsboro;
 }
 
-h1, h2, label {
+h1, h2, label, p {
     font-family: "Roboto Condensed", sans-serif;
     font-size: 48px;
     display: flex;
@@ -150,4 +150,24 @@ button:hover {
     justify-items: center;
     width: 700px;
     height: 80%;
+}
+
+.fixed-top-block {
+    width: 500px;
+    height: 200px;
+    margin-left: calc(100% - 520px);
+    background-color: dimgrey;
+    border-radius: 5px;
+    box-shadow: 0 0 20px grey;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 700;
+    color: aliceblue;
 }
