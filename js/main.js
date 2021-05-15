@@ -98,17 +98,46 @@ let cursor = document.getElementById('cursor-coordinates');
 let lang = document.getElementById('language');
 let geo = document.getElementById('geolocation');
 
+let localStorageText = document.getElementById('text1');
+let cookieText = document.getElementById('text1');
+let sessionStorageText = document.getElementById('text3');
 
+localStorageText.oninput = () => {
+    localStorage.setItem('local', localStorageText.innerText);
+}
+
+if (localStorage.getItem('local') !== '') {
+    localStorageText.innerText = localStorage.getItem('local');
+}
+
+//
+// cookieText.oninput = () =>  {
+//
+// }
+
+sessionStorageText.oninput = () => {
+    sessionStorage.setItem('session', sessionStorageText.innerText);
+}
+
+if(sessionStorage.getItem('session') !== '') {
+    sessionStorageText.innerText = sessionStorage.getItem('session');
+}
 
 window.onload = () => {
     document.onmousemove = (event) => {
         cursor.innerHTML = 'Cursor coordinates: X: ' + event.pageX + ', Y: ' + event.pageY;
     }
+
     lang.innerHTML = 'Language: ' + navigator.language;
     navigator.geolocation.getCurrentPosition((position) => {
         geo.innerHTML = 'Your location: Ш: ' + position.coords.latitude + ', Д: ' + position.coords.longitude;
     });
 }
+
+
+
+
+
 
 
 
