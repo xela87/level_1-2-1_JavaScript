@@ -99,7 +99,7 @@ let lang = document.getElementById('language');
 let geo = document.getElementById('geolocation');
 
 let localStorageText = document.getElementById('text1');
-let cookieText = document.getElementById('text1');
+// let cookieText = document.getElementById('text1');
 let sessionStorageText = document.getElementById('text3');
 
 localStorageText.oninput = () => {
