@@ -16,7 +16,7 @@ btn3.onclick = () => {
     if (counter % 2 !== 0) {
         item.classList.add('hidden');
     } else {
-        document.getElementsByClassName('hidden')[0].classList.remove('hidden');
+        item.classList.remove('hidden');
     }
 }
 
@@ -159,3 +159,20 @@ innerBlock.onclick = (event) => {
     alert('inner block');
     event.stopPropagation();
 }
+
+/**Task 16*/
+const scrollBlockBtn = document.getElementById('show-cover');
+const blockWindow = document.getElementById('cover');
+const bodyDiv = document.querySelector('body');
+scrollBlockBtn.onclick = () => {
+    blockWindow.classList.remove('hidden');
+    bodyDiv.classList.add('block-scrolling')
+}
+blockWindow.onclick = () => {
+    blockWindow.classList.add('hidden');
+    bodyDiv.classList.remove('block-scrolling');
+}
+
+/**Task 17*/
+
+/**Task 18*/
