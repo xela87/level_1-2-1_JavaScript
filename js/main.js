@@ -147,5 +147,15 @@ window.onscroll = () => {
 }
 btn8.onclick = () => {
     window.scrollTo({top: 0, behavior: "smooth"})
+}
 
+/**Task 15*/
+const outerBlock = document.getElementById('outer-div');
+const innerBlock = document.getElementById('inner-div');
+outerBlock.onclick = () => {
+    alert('outer block');
+}
+innerBlock.onclick = (event) => {
+    alert('inner block');
+    event.stopPropagation();
 }
