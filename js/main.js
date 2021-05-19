@@ -174,5 +174,33 @@ blockWindow.onclick = () => {
 }
 
 /**Task 17*/
+const form = document.getElementById('go-form');
+
+form.onclick = (event) => {
+    event.preventDefault();
+}
 
 /**Task 18*/
+const dropArea = document.querySelector('.drag-block'),
+    dragText = dropArea.querySelector('h2'),
+    button = dropArea.querySelector('button'),
+    input = dropArea.querySelector('input');
+
+button.onclick = () => {
+    input.click();
+}
+
+input.onchange = () => {
+    dropArea.classList.add("active");
+    dragText.textContent = "Prepared to Upload File";
+}
+
+dropArea.addEventListener("dragover", () => {
+    dropArea.classList.add("active");
+    dragText.textContent = "Release to Upload File";
+});
+
+dropArea.addEventListener("dragleave", () => {
+    dropArea.classList.remove("active");
+    dragText.textContent = "Drag & Drop to Upload File";
+});

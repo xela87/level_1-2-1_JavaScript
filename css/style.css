@@ -193,3 +193,22 @@ button:hover {
 .block-scrolling {
     overflow: hidden;
 }
+
+.drag-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 90%;
+}
+
+.drag-block h2 {
+    margin: 15px auto;
+}
+
+.active {
+    width: 100%;
+    height: 100%;
+    background-color: dimgrey;
+    opacity: 0.5;
+}
